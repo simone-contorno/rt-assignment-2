@@ -44,9 +44,9 @@ The circuit is this one:
 There are 3 packets:
 <ul>
     <li>second_assignment: contains the map of the circuit;</li>
-    <li>second_assignemnt_node: contains 2 sources file .cpp
+    <li>second_assignement_node: contains 2 sources file .cpp
         <ul>
-            <li>robot.cpp: controls the robot to follow the ciruit avoiding the borders; for this task it read data from laser scanners;</li>
+            <li>robot.cpp: controls the robot to follow the ciruit avoiding the borders; for this task it reads data from laser scanners;</li>
             <li>robot_controller.cpp: provides the user interface to digit commands.</li>
         </ul>
     </li>
@@ -68,7 +68,7 @@ First of all download into your ROS workspace the current repository opening the
 
 Extract the folders into the src directory of your 
 ROS workspace.<br> 
-After, go in the root folder of your ROS workspace and type: 
+After, go into the root folder of your ROS workspace and type: 
 
 <pre>
     <code>
@@ -127,6 +127,6 @@ In the last one run the robot node:
 <a name="improve"></a>
 ### Improvements
 
-To improve the robot performance, it could be done an improvement to mantain better the robot on the center of the path.<br><br>
+To improve the robot performance, it could be done an improvement to mantain better the robot in the center of the path.<br><br>
 
 Thanks to have read this file, i hope it was clear and interesting.<br>
