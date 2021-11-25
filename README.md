@@ -2,7 +2,7 @@
 ## Second Assignment of Research Track 1 - Robotics Engineering
 ### Author: Simone Contorno
 
-<br><br><br>
+<br><br>
 
 Control of a robot in a simulated environment.
 
