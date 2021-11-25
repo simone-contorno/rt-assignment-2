@@ -50,6 +50,8 @@ FUNCTION main WITH (argc, argv)
             SET speed TO service1.response.speed
             PRINT "New speed: "
             PRINT speed
+        ELSEIF in IS EQUALS TO 4 THEN
+            CONTINUE
         ELSE
             PRINT "ERROR! Command not valid: type '0', '1', '2', '3' or '4'."
         ENDIF
