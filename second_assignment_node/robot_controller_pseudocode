@@ -1,0 +1,57 @@
+/* 
+ * Robotics control in a simulated environment
+ * Robotics Engineering - Simone Contorno
+ * 
+ * PSEUDOCODE
+ */
+
+INITIALIZE publisher
+INITIALIZE service client1
+INITIALIZE service client2
+INITIALIZE speed TO 0.0
+
+FUNCTION main WITH (argc, argv)
+    INITIALIZE the node to "robot_controller"
+    SET client1 TO "/robot_control"
+    SET client2 TO "/reset_positions"
+
+    INITIALIZE in TO -1
+
+    PRINT list of commands
+
+    WHILE in IS NOT EQUALS TO 4 
+        SET in TO -1
+        PRINT "Command: "
+        TAKE user input
+
+        IF in IS EQUALS TO 0 THEN
+            INITIALIZE service2
+            CALL client2.waitForExistence
+            CALL client2.call(service2)
+            PRINT "Robot position reset."
+        ELSEIF in IS EQUALS TO 1 OR 2 OR 3 THEN
+            INITIALIZE service1
+            IF in IS EQUALS TO 1 THEN
+                PRINT "Increasing velocity..."
+                SET service1.request.command TO 1.0
+                SET service1.request.speed TO speed
+            ELSEIF in IS EQUALS TO 2 THEN
+                PRINT "Decreasing velocity..."
+                SET service1.request.command TO 2.0
+                SET service1.request.speed TO speed
+            ELSE 
+                PRINT "Stopping the robot..."
+                SET service1.request.command TO 3.0
+                SET service1.request.speed TO 0
+            ENDIF
+
+            CALL client1.waitForExistence
+            CALL client1.call(service1)
+            SET speed TO service1.response.speed
+            PRINT "New speed: "
+            PRINT speed
+        ELSE
+            PRINT "ERROR! Command not valid: type '0', '1', '2', '3' or '4'."
+        ENDIF
+    RETURN 0
+ENDFUNCTION

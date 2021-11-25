@@ -1,0 +1,83 @@
+/* 
+ * Robotics control in a simulated environment
+ * Robotics Engineering - Simone Contorno
+ * 
+ * PSEUDOCODE
+ */
+
+INITIALIZE publisher
+INITIALIZE service client
+INITIALIZE flag TO 0
+INITIALIZE speed TO 0.0
+
+FUNCTION robotCallback WITH (msg)
+    INITIALIZE first_value TO 0
+    INITIALIZE mid_VALUE TO 30
+    INITIALIZE left_value TO 0
+    
+    INITIALIZE service
+    SET server.request.command TO 4.0
+    CALL client.waitForExistence
+    CALL client.call(service)
+    SET speed TO server.response.speed
+    PRINT "Actual robot velocity: "
+    PRINT speed
+
+    SET first_value COMPUTING the maximum value on the left 
+    SET mid_value COMPUTING the minimum value in the middle
+    SET left_value COMPUTING the maximum value on the right
+    
+    SET diff TO first_value - second_value
+    SET abs_diff COMPUTING the absolute value of diff
+
+    IF mid_value IS LESS THAN 1 THEN
+        IF flag IS EQUALS TO 0 THEN
+            PRINT "I'm too close to an obstacle!"
+        ENDIF
+
+        IF diff IS LESS THAN 0 THEN
+            PRINT "Turn Right..."
+            IF diff IS LESS THAN -1 THEN
+                SET linear velocity TO 0
+                SET angular velocity TO diff
+            ELSE 
+                SET angular velocity TO -1
+                SET linear velocity TO abs_duff
+            ENDIF
+        ELSEIF diff IS GREATER THAN 0 THEN
+            PRINT "Turn Left..."
+            IF diff IS GREATER THAN 1 THEN
+                SET linear velocity TO 0
+                SET angular velocity TO diff
+            ELSE 
+                SET angular velocity TO 1
+                SET linear velocity TO abs_diff
+            ENDIF
+        ENDIF
+
+        SET flag TO 0
+    ELSE
+        IF flag IS EQUALS TO 0 THEN
+            PRINT "Go on..."
+            SET flag TO 1
+        ENDIF
+
+        IF speed * (mid_value / 3) IS GREATER OR EQUALS TO speed THEN
+            SET linear velocity TO speed
+        ELSE 
+            SET linear velocity TO speed * (mid_value / 3)
+        ENDIF
+        SET angulare velocity TO 0
+    ENDIF
+
+    PUBLISH speed
+ENDFUNCTION
+
+FUNCTION main WITH (argc, argv)
+    INITIALIZE the node to "robot"
+    SET publisher TO "/cmd_vel"
+    SET service client TO "/robot_control"
+    INITIALIZE AND SET subscriber TO "/base_scan"
+    CALL ros::spin
+    RETURN 0
+ENDFUNCTION
