@@ -41,7 +41,7 @@ int main(int argc, char **argv) {
         "-------------------------------\n\n"
     );
 
-    while (true) {
+    while (in != 4) {
         in = -1;
 
         // Take input value
@@ -85,10 +85,6 @@ int main(int argc, char **argv) {
             client1.call(com);
             speed = com.response.speed;
             printf("New speed: %f\n", speed);
-        }
-        // Exit
-        else if (in == 4) {
-            exit(0);
         }
         // Manage wrong inputs
         else {

@@ -22,7 +22,7 @@ int flag = 0; // Just to manage the printed strings
 float speed = 0.0; // Robot velocity
 
 /*
- * 1. Make a request to the server for the actual robot velocity
+ * 1. Make a request to the service for the actual robot velocity
  * 2. Take laser values and check for the obstacles
  * 3. Publish robot velocity
  */ 
@@ -32,7 +32,7 @@ void robotCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
     float mid_value = 30;
     float last_value = 0;
 
-    // 1. Make the request to the server 
+    // 1. Make the request to the service 
     second_assignment_server::Robot com;
     com.request.command = 4.0;
     client.waitForExistence();
@@ -43,7 +43,7 @@ void robotCallback(const sensor_msgs::LaserScan::ConstPtr& msg) {
         printf("Actual robot velocity: %f\n", speed);
     }
 
-    // 2. Take the minimum value on the left
+    // 2. Take the maximum value on the left
     int i = 0;
     while (i < 120) {
         if (msg->ranges[i] > first_value)
