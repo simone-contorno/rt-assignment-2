@@ -120,7 +120,7 @@ In the last one run the robot node:
 
 <pre>
     <code>
-rosrun second_assignment_node robot
+        rosrun second_assignment_node robot
     </code>
 </pre>
 
