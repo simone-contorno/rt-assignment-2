@@ -86,6 +86,10 @@ int main(int argc, char **argv) {
             speed = com.response.speed;
             printf("New speed: %f\n", speed);
         }
+        // Exit 
+        else if (in == 4) {
+            continue;
+        }
         // Manage wrong inputs
         else {
             printf("ERROR! Command not valid: type '0', '1', '2', '3' or '4'.\n");
