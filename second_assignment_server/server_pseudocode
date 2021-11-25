@@ -1,0 +1,32 @@
+/* 
+ * Robotics control in a simulated environment
+ * Robotics Engineering - Simone Contorno
+ * 
+ * PSEUDOCODE
+ */
+
+INITIALIZE speed TO 0.0
+
+FUNCTION serverCallback WITH (req, res)
+    IF req.command IS EQUALS TO 1 THEN
+        SET res.speed TO req.speed + 0.5
+    ELSEIF req.command IS EQUALS TO 2 THEN
+        SET res.speed TO req.speed - 0.5
+    ELSEIF req.command IS EQUALS TO 3 THEN
+        SET res.speed TO req.speed
+    ELSEIF req.command IS EQUALS TO 4 THEN
+        SET res.speed TO speed
+    ENDIF
+
+    SET speed TO res.speed
+    
+    RETURN true
+ENDFUNCTION
+
+FUNCTION main WITH (argc, argv)
+    INITIALIZE the node to "robot_server"
+    INITIALIZE AND SET service TO "/robot_control"
+
+    CALL ros::spin
+    RETURN 0
+ENDFUNCTION
