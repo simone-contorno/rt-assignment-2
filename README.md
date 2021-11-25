@@ -80,7 +80,7 @@ Afterwards type:
 
 <pre>
     <code>
-        rospack profile    
+    rospack profile    
     </code>
 </pre>
 
