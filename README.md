@@ -78,11 +78,9 @@ catkin_make
 
 Afterwards type:
 
-<pre>
 <code>
 rospack profile    
 </code>
-</pre>
 
 Now, open 5 terminals; in the first one run ROS core:
 
