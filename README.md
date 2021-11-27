@@ -61,9 +61,9 @@ Look the pseudocode files into the corresponding directories for more details.<b
 First of all download into your ROS workspace the current repository opening the terminal and typing:
 
 <pre>
-    <code>
+<code>
 git clone https://github.com/simone-contorno/RT-Assignment-2
-    </code>
+</code>
 </pre>
 
 Extract the folders into the src directory of your 
@@ -71,57 +71,57 @@ ROS workspace.<br>
 After, go into the root folder of your ROS workspace and type: 
 
 <pre>
-    <code>
+<code>
 catkin_make
-    </code>
+</code>
 </pre>
 
 Afterwards type:
 
 <pre>
-    <code>
+<code>
 rospack profile    
-    </code>
+</code>
 </pre>
 
 Now, open 5 terminals; in the first one run ROS core:
 
 <pre>
-    <code>
+<code>
 roscore
-    </code>
+</code>
 </pre>
 
 In the second one run the node to visualize the map:
 
 <pre>
-    <code>
+<code>
 rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
-    </code>
+</code>
 </pre>
 
 In the third one run the service node:
 
 <pre>
-    <code>
+<code>
 rosrun second_assignment_server server
-    </code>
+</code>
 </pre>
 
 In the fourth one run the robot controller node to manage the robot through the user interface:
 
 <pre>
-    <code>
+<code>
 rosrun second_assignment_node robot_controller
-    </code>
+</code>
 </pre>
 
 In the last one run the robot node:
 
 <pre>
-    <code>
+<code>
 rosrun second_assignment_node robot
-    </code>
+</code>
 </pre>
 
 <a name="improve"></a>
