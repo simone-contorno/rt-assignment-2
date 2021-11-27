@@ -62,7 +62,7 @@ First of all download into your ROS workspace the current repository opening the
 
 <pre>
     <code>
-        git clone https://github.com/simone-contorno/RT-Assignment-2
+git clone https://github.com/simone-contorno/RT-Assignment-2
     </code>
 </pre>
 
@@ -72,7 +72,7 @@ After, go into the root folder of your ROS workspace and type:
 
 <pre>
     <code>
-        catkin_make
+catkin_make
     </code>
 </pre>
 
@@ -80,7 +80,7 @@ Afterwards type:
 
 <pre>
     <code>
-        rospack profile    
+rospack profile    
     </code>
 </pre>
 
@@ -88,7 +88,7 @@ Now, open 5 terminals; in the first one run ROS core:
 
 <pre>
     <code>
-        roscore
+roscore
     </code>
 </pre>
 
@@ -96,7 +96,7 @@ In the second one run the node to visualize the map:
 
 <pre>
     <code>
-        rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
+rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
     </code>
 </pre>
 
@@ -104,7 +104,7 @@ In the third one run the service node:
 
 <pre>
     <code>
-        rosrun second_assignment_server server
+rosrun second_assignment_server server
     </code>
 </pre>
 
@@ -112,7 +112,7 @@ In the fourth one run the robot controller node to manage the robot through the 
 
 <pre>
     <code>
-        rosrun second_assignment_node robot_controller
+rosrun second_assignment_node robot_controller
     </code>
 </pre>
 
@@ -120,7 +120,7 @@ In the last one run the robot node:
 
 <pre>
     <code>
-        rosrun second_assignment_node robot
+rosrun second_assignment_node robot
     </code>
 </pre>
 
