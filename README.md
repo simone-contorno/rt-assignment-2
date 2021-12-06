@@ -60,67 +60,37 @@ Look the pseudocode files into the corresponding directories for more details.<b
 
 First of all download into your ROS workspace the current repository opening the terminal and typing:
 
-<pre><code>
-git clone https://github.com/simone-contorno/RT-Assignment-2
-</code></pre>
+<pre><code>git clone https://github.com/simone-contorno/RT-Assignment-2</code></pre>
 
 Extract the folders into the src directory of your 
 ROS workspace.<br> 
 After, go into the root folder of your ROS workspace and type: 
 
-<pre>
-<code>
-catkin_make
-</code>
-</pre>
+<pre><code>catkin_make</code></pre>
 
 Afterwards type:
 
-<pre>
-<code>
-rospack profile    
-</code>
-</pre>
+<pre><code>rospack profile</code></pre>
 
 Now, open 5 terminals; in the first one run ROS core:
 
-<pre>
-<code>
-roscore
-</code>
-</pre>
+<pre><code>roscore</code></pre>
 
 In the second one run the node to visualize the map:
 
-<pre>
-<code>
-rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
-</code>
-</pre>
+<pre><code>rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world</code></pre>
 
 In the third one run the service node:
 
-<pre>
-<code>
-rosrun second_assignment_server server
-</code>
-</pre>
+<pre><code>rosrun second_assignment_server server</code></pre>
 
 In the fourth one run the robot controller node to manage the robot through the user interface:
 
-<pre>
-<code>
-rosrun second_assignment_node robot_controller
-</code>
-</pre>
+<pre><code>rosrun second_assignment_node robot_controller</code></pre>
 
 In the last one run the robot node:
 
-<pre>
-<code>
-rosrun second_assignment_node robot
-</code>
-</pre>
+<pre><code>rosrun second_assignment_node robot</code></pre>
 
 <a name="improve"></a>
 ### Improvements
