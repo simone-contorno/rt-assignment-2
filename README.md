@@ -60,11 +60,9 @@ Look the pseudocode files into the corresponding directories for more details.<b
 
 First of all download into your ROS workspace the current repository opening the terminal and typing:
 
-<pre>
-<code>
+<pre><code>
 git clone https://github.com/simone-contorno/RT-Assignment-2
-</code>
-</pre>
+</code></pre>
 
 Extract the folders into the src directory of your 
 ROS workspace.<br> 
