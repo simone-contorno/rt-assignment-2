@@ -62,8 +62,7 @@ First of all download into your ROS workspace the current repository opening the
 
 <pre><code>git clone https://github.com/simone-contorno/RT-Assignment-2</code></pre>
 
-Extract the folders into the src directory of your 
-ROS workspace.<br> 
+Move the folders into the src directory of your ROS workspace.<br> 
 After, go into the root folder of your ROS workspace and type: 
 
 <pre><code>catkin_make</code></pre>
