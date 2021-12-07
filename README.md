@@ -41,7 +41,7 @@ The circuit is this one:
 <a name="how"></a>
 ### How it works
 
-There are 3 packets:
+There are 3 packages:
 <ul>
     <li>second_assignment: contains the map of the circuit;</li>
     <li>second_assignement_node: contains 2 sources file .cpp
