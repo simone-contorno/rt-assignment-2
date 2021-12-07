@@ -43,14 +43,14 @@ The circuit is this one:
 
 There are 3 packages:
 <ul>
-    <li>second_assignment: contains the map of the circuit;</li>
-    <li>second_assignement_node: contains 2 sources file .cpp
+    <li>second_assignment: contains the map of the circuit.</li>
+    <li>second_assignment_node: contains 2 source files .cpp
         <ul>
-            <li>robot.cpp: controls the robot to follow the ciruit avoiding the borders; for this task it reads data from laser scanners;</li>
-            <li>robot_controller.cpp: provides the user interface to digit commands;</li>
+            <li>robot.cpp: controls the robot to follow the ciruit avoiding the borders; for this task it reads data from laser scanners.</li>
+            <li>robot_controller.cpp: provides the user interface to digit commands.</li>
         </ul>
     </li>
-    <li>second_assigment_server: contains the source file server.cpp that provide a service that take in input the requested command from the robot_controller node, and execute the corrisponding task. Robot.srv is the file used by this service.</li>
+    <li>second_assignment_server: contains the source file server.cpp that provide a service that take in input the requested command from the robot_controller node, and execute the corrisponding task; Robot.srv is the file used by this service.</li>
 </ul>
 
 Look the pseudocode files into the corresponding directories for more details.<br>
