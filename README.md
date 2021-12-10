@@ -48,7 +48,7 @@ There are 3 packages:
         <ul>
             <li>robot.cpp: controls the robot to follow the ciruit avoiding the borders; for this task it reads data from laser scanners,
             compare them (on the left and on the right) when it is too close to an obstacle (in front of its) and choose the direction 
-            where there is more space; it also publishes the new linear velocity (managed from the unser interface provided by robot_controller node) in the 
+            where there is more space; it also publishes the new linear velocity (managed from the user interface provided by robot_controller node) in the 
             topic cmd_vel.</li>
             <li>robot_controller.cpp: provides the user interface to digit commands and sends them to the service (server.cpp).</li>
         </ul>
