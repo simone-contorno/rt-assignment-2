@@ -27,7 +27,7 @@ FUNCTION robotCallback WITH (msg)
     SET mid_value COMPUTING the minimum value in the middle
     SET last_value COMPUTING the maximum value on the right
     
-    SET diff TO first_value - last_value
+    SET diff TO last_value - first_value
     SET abs_diff COMPUTING the absolute value of diff
 
     IF mid_value IS LESS THAN 1 THEN
