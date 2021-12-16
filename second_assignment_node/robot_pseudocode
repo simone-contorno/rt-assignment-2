@@ -13,7 +13,7 @@ INITIALIZE speed TO 0.0
 FUNCTION robotCallback WITH (msg)
     INITIALIZE first_value TO 0
     INITIALIZE mid_VALUE TO 30
-    INITIALIZE left_value TO 0
+    INITIALIZE last_value TO 0
     
     INITIALIZE service
     SET server.request.command TO 4.0
@@ -25,9 +25,9 @@ FUNCTION robotCallback WITH (msg)
 
     SET first_value COMPUTING the maximum value on the left 
     SET mid_value COMPUTING the minimum value in the middle
-    SET left_value COMPUTING the maximum value on the right
+    SET last_value COMPUTING the maximum value on the right
     
-    SET diff TO first_value - second_value
+    SET diff TO first_value - last_value
     SET abs_diff COMPUTING the absolute value of diff
 
     IF mid_value IS LESS THAN 1 THEN
@@ -42,7 +42,7 @@ FUNCTION robotCallback WITH (msg)
                 SET angular velocity TO diff
             ELSE 
                 SET angular velocity TO -1
-                SET linear velocity TO abs_duff
+                SET linear velocity TO abs_diff
             ENDIF
         ELSEIF diff IS GREATER THAN 0 THEN
             PRINT "Turn Left..."
