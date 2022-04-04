@@ -1,6 +1,5 @@
-# RT-Assignment-2
-## Second Assignment of Research Track 1 - Robotics Engineering
-### Author: Simone Contorno
+# Second Assignment of Research Track 1 - Robotics Engineering
+## Author: Simone Contorno
 
 <br>
 
@@ -15,7 +14,7 @@ A rapid description of how the program works (pseudo-code).<br>
 [Go to How it works](#how)
 
 ### Installation and Execution
-How install and run RT-Assignment-2 in Linux.<br>
+How install and run this program in Linux.<br>
 [Go to Installation and Execution](#installation)
 
 ### Improvements
@@ -63,7 +62,7 @@ Look the pseudocode files into the corresponding directories for more details.<b
 
 First of all download into your ROS workspace the current repository opening the terminal and typing:
 
-<pre><code>git clone https://github.com/simone-contorno/RT-Assignment-2</code></pre>
+<pre><code>git clone https://github.com/simone-contorno/rt-assignment-2</code></pre>
 
 Move the folders into the src directory of your ROS workspace.<br> 
 After, go into the root folder of your ROS workspace and type: 
